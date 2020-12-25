@@ -21,9 +21,9 @@
 # You can view the GNU General Public License at <http://www.gnu.org/licenses/>
 #
 # Version History:
+# v2020-12-24 Convert to python3
 # v2018-04-25 Update
 # v2017-10-28 Initial Version
-
  
 
 import sys
