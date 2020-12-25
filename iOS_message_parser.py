@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: cp1252 -*-
 
 # iOS_sms_parser.py = Extracts SMS, iMessage and MMS from iOS sms.db.
@@ -32,7 +32,7 @@ from optparse import OptionParser
 from os import path
 
 version_string = "iOS_sms_parser v2018-04-25"
-print "Running " + version_string
+print("Running " + version_string)
 
 usage = "Usage: %prog -d sms.db -o sms_output.tsv"
 
@@ -53,19 +53,19 @@ if len(sys.argv) == 1:
 
 if (options.smsdb == None):
     parser.print_help()
-    print "\SMS database filename not specified!"
+    print("\SMS database filename not specified!")
     exit(-1)
 
 if (options.outputtsv == None):
     parser.print_help()
-    print "\nOutput filename not specified!"
+    print("\nOutput filename not specified!")
     exit(-1)
 
 # check db file exists before trying to connect
 if path.isfile(options.smsdb):
     chatscon = sqlite3.connect(options.smsdb)
 else:
-    print "Specified SMS Database does not exist!"
+    print("Specified SMS Database does not exist!")
     exit(-1)
 
 # open chat output file if reqd
@@ -74,7 +74,7 @@ if (options.outputtsv != None):
         import codecs
         outputfile = codecs.open(options.outputtsv, "w", "utf-8")
     except:
-        print ("Trouble Opening SMS Output File For Writing")
+        print("Trouble Opening SMS Output File For Writing")
         exit(-1)
 
 # write header for contacts output file
@@ -181,7 +181,7 @@ chatscon.close()
 outputfile.close()
 
 
-print "\nExtracted " + str(chatcount) + "records\n"
+print("\nExtracted " + str(chatcount) + "records\n")
 
 
 exit(0)
