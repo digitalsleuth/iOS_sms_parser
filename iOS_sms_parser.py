@@ -31,7 +31,7 @@ import sqlite3
 from optparse import OptionParser
 from os import path
 
-version_string = "iOS_sms_parser v2018-04-25"
+version_string = "iOS_sms_parser v2020-12-24"
 print("Running " + version_string)
 
 usage = "Usage: %prog -d sms.db -o sms_output.tsv"
